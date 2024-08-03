@@ -1,28 +1,16 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import SignIn from './components/SignIn/SignIn';
+import { GlobalStyle } from './Global.styled.js';
+import HomePage from './pages/HomePage/HomePage.jsx';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const showModal = () => {
-    setIsOpen((prev) => !prev);
-  };
-
   return (
-    <div>
-      <p>
-        Колесо баланса — это инструмент, который используется для визуализации и
-        оценки различных аспектов жизни человека. Оно помогает выявить области,
-        в которых человек может быть удовлетворен, а также те, которые требуют
-        внимания и улучшения.{' '}
-      </p>
-      <p>
-        <span onClick={showModal}>Войдите</span> в свой аккаунт, чтобы сделать
-        свое колесо баланса
-      </p>
-      {isOpen && <SignIn />}
-    </div>
+    <>
+      <GlobalStyle />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
+    </>
   );
 }
 
