@@ -1,9 +1,5 @@
-function CommonModal ({children}) {
-    return(
-        <div>
-            {children}
-        </div>
-    )
+function CommonModal({ children }) {
+  return <div>{children}</div>;
 }
 
 export default CommonModal;
