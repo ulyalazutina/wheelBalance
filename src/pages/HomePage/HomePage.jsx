@@ -1,4 +1,3 @@
-import SignIn from '../../components/SignIn/SignIn';
 import { useState } from 'react';
 import { Div, H1, Pdesc, Plink, Span, } from './HomePage.styled';
 
@@ -18,11 +17,12 @@ function HomePage() {
         которых человек может быть удовлетворен, а также те, которые требуют
         внимания и улучшения.
       </Pdesc>
-      <Plink>
-        <Span onClick={showModal}>Войдите</Span> в свой аккаунт, чтобы сделать
-        свое колесо баланса
+      <Plink to={"/choice-section"}>
+        Сделать свое колесо баланса
+        {/* <Span onClick={showModal}>Войдите</Span> в свой аккаунт, чтобы сделать
+        свое колесо баланса */}
       </Plink>
-      {isOpen && <SignIn />}
+      {/* {isOpen && <SignIn />} */}
     </Div>
   );
 }
