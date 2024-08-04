@@ -1,5 +1,7 @@
+import { Form } from "./CommonModal.styled";
+
 function CommonModal({ children }) {
-    return <div>{children}</div>;
+    return <Form action="#">{children}</Form>;
 }
 
 export default CommonModal;
